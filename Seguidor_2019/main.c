@@ -89,7 +89,6 @@ PIN_RB4 ------ S2
 //                                    Funciones y procedimientos                                 //
 //====================================================================================================================
 
-
 float Sensores(int8 Num_Sensor=0)
 {
 output_bit(PIN_B3,N[Num_Sensor][0]);
@@ -178,7 +177,6 @@ output_LOW(Led_Izquierdo);
 delay_ms(100); 
 output_HIGH(Led_Derecho);
 output_HIGH(Led_Izquierdo);
-
 }	
 
 float Calcular_Linea(){ // Funcion que calcula la posicion de la linea
@@ -199,7 +197,6 @@ float Calcular_Linea(){ // Funcion que calcula la posicion de la linea
   
   //printf (" %f \r ",sensors_average);
   //printf (" %f \r ",sensors_sum);
-  
   //printf (" %i \r ",sensors_average);
   //printf (" %i \r  ",sensors_sum);
 	if(sensors_average==0 || sensors_sum==0){
@@ -332,7 +329,6 @@ void PID(){
 //                                                                                   						//
 //====================================================================================================================
 
-
 void main(){
 	set_tris_B(0b000100000);
 	set_tris_F(0xFF);
@@ -381,7 +377,6 @@ void main(){
 	
 	   	//UR=UL=00;
 		Motors(UL,UR);
-
 
 	 // printf (" %f %f %f \r\n",linea,Up,Ud);
 	 // printf (" %f\r\n",linea);  
